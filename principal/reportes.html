@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+    <body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #352208;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Turismo Extremo Sur</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../principal/nosotros.html">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../formulario/templates/formQS.html">Quejas y Sugerencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../formulario/templates/form.html">Registrate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contacto</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../principal/reportes.html">Reportes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../principal/Cierre.html">Cerrar Sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../formulario/templates/formIN.html">Iniciar Sesión</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <style>
+    table, th, td {
+        border: 1px solid black;
+        background-color: white;
+    }
+    html {
+        background-color: rgb(181, 221, 233);
+    }
+</style>
+<br>
+<br>
+<br>
+<center>
+<h2>Reportes</h2>
+</center>
+<center>
+        <table style="width: 1250px;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Rut</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Dirección</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Admin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>21.236.346-5</td>
+                    <td>Tomas</td>
+                    <td>Ruiz</td>
+                    <td>Bruna</td>
+                    <td>Las Lomas 641</td>
+                    <td>truiz@gmail.com</td>
+                    <td>959728934</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>22.280.893-3</td>
+                    <td>Bastian</td>
+                    <td>Rodriguez</td>
+                    <td>Fernandez</td>
+                    <td>Camino Las Flores 5562</td>
+                    <td>brodriguez@gmail.com</td>
+                    <td>965172104</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td></td>
+                    <td>Cristiano</td>
+                    <td>Ronaldo</td>
+                    <td>Dos Santos</td>
+                    <td>La Finca</td>
+                    <td>cristianoronaldo@gmail.com</td>
+                    <td>356124565</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td></td>
+                    <td>Maria</td>
+                    <td>Olave</td>
+                    <td>Basso</td>
+                    <td>Los Grillos 1312</td>
+                    <td>pepsi1234basso@gmail.com</td>
+                    <td>998268312</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td></td>
+                    <td>Brian</td>
+                    <td>O´Conner</td>
+                    <td>Cortes</td>
+                    <td>Long Beach 1772</td>
+                    <td>paulwalker21@gmail.com</td>
+                    <td>2348871</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+</center>
+</html>

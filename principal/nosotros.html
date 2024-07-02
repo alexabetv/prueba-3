@@ -1,0 +1,214 @@
+<!-- comenzamos la creacion de la pagina web -->
+<!DOCTYPE html>
+<!-- lenguaje ingles -->
+<html lang="en">
+<!-- se le coloca un titulo de busqueda a la pagina  -->
+<head>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--Titulo de la pagina-->
+  <title>Turismo Extremo Sur</title> 
+
+  <style>
+    /* /* indica el margen de distancia entre un objeto y otro */
+    container {
+      margin-bottom: 200px; 
+    }
+    /* esta funcion cambian el tipo de fuente del titulo principal de la pagina */
+    .h1 {
+      font-family: "Times New Roman", Times, serif;
+    }
+    /* esta funcion cambia el tipo de fuente del subtitulo */
+    .p2 {
+      font-family: Georgia, Helvetica, sans-serif;
+    }
+    /* esta funcion cambia el tipo de fuente de la descripcion */
+    .p3 {
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+
+    body {
+      /* background-image: url("img/acuarela.png");
+  background-repeat: repeat-x; */
+      /* esta funcion cambia el colores del fondo de la pagina web entera, por esto esta en el cuerpo del codigo */
+      background-color: rgb(255, 255, 255);
+      color: rgb(32, 88, 36);
+    }
+
+   
+
+      /* con la funcion ctrl+k+c puedes documentar tu codigo parte por parte */
+  </style>
+<br>
+<br>
+<br>
+</head>
+<!-- se comienza con el cuerpo de la pagina, es decir, con el armado de su interfaz grafica -->
+    <!-- en esta parte se modifica el margen del mneu bar con el titulo -->
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <div class="w3-container w3-center">
+          <img src="img/logo (3).jpg" alt="car" style="width:86%;max-width:250px">
+          <!-- modificadores del color de titulo y subtitulo de la pagina -->
+          <h1 style="background-color:rgb(255, 255, 255);"><b>Conoce nuestros servicios</b></h1>
+        </div>
+      </div>
+  
+ <body>
+  <!--Aqui comienza el titulo de la pagina con un subtitulo -->
+  
+  <!--<div class="container">
+    <center><img class="image" src="Imagenes/Fondo1.jpg" alt="Imagen" height="200px" ></center>
+    <div class="text"><h1>Turismo Extremo Sur</h1></div>
+  </div>-->
+  <!--Barra de navegacion desplegable con la pagina -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #352208;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Turismo Extremo Sur</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../principal/nosotros.html">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../formulario/templates/formQS.html">Quejas y Sugerencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../formulario/templates/form.html">Registrate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contacto</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../principal/reportes.html">Reportes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../principal/Cierre.html">Cerrar Sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../formulario/templates/formIN.html">Iniciar Sesión</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Sección de Servicios -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Algunos servicios...</h2>
+        <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 h-100">
+                                <img src="{{ url_for('static', filename='img/Punta Arenas 1.jpg') }}" class="card-img-top" alt="Servicio Premium">
+                                <div class="card-body">
+                                    <h5 class="card-title">Excursiones de Aventura</h5>
+                                    <p class="card-text">Descubre paisajes impresionantes y vive la adrenalina con nuestras excursiones de aventura, que incluyen caminatas, escalada y deportes extremos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 h-100">
+                                <img src="{{ url_for('static', filename='img/Punta Arenas 2.jpeg') }}" class="card-img-top" alt="Servicio 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tours Culturales</h5>
+                                    <p class="card-text">Sumérgete en la historia y la cultura local con nuestros tours culturales, visitando museos, sitios históricos y participando en actividades tradicionales.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 h-100">
+                                <img src="{{ url_for('static', filename='img/Tierra del Fuego 1.jpeg') }}" class="card-img-top" alt="Servicio 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Escapadas de Relajación</h5>
+                                    <p class="card-text">Relájate y rejuvenece en nuestras escapadas de bienestar, que incluyen spa, yoga y retiros de meditación en entornos tranquilos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 h-100">
+                                <img src="{{ url_for('static', filename='img/Hotel1.png') }}" class="card-img-top" alt="Servicio 4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Torres Del Paine</h5>
+                                    <p class="card-text">Explora la naturaleza con nuestros viajes de aventura, que incluyen safaris, observación de fauna y flora, y excursiones por parques nacionales.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 h-100">
+                                <img src="{{ url_for('static', filename='img/Torres1.png') }}" class="card-img-top" alt="Servicio 5">
+                                <div class="card-body">
+                                    <h5 class="card-title">Punta Arenas</h5>
+                                    <p class="card-text">Disfruta del mar con nuestros cruceros y excursiones náuticas, que incluyen paseos en barco, snorkel y buceo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 h-100">
+                                <img src="{{ url_for('static', filename='img/servicio6.jpeg') }}" class="card-img-top" alt="Servicio 6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Experiencias Gastronómicas</h5>
+                                    <p class="card-text">Degusta lo mejor de la cocina local con nuestras experiencias gastronómicas, que incluyen tours de comida, clases de cocina y degustaciones de vinos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+   <!-- Sección Sobre Nosotros -->
+   <section id="about-us" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Sobre Nosotros</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Nuestra Misión</h3>
+                <p>Nuestra empresa se dedica a proporcionar experiencias inolvidables a través de una variedad de servicios turísticos. Desde excursiones de aventura y tours culturales hasta escapadas de relajación y experiencias gastronómicas, nos esforzamos por ofrecer lo mejor en cada aspecto de nuestro servicio.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>¿Qué Hacemos?</h3>
+                <p>Ofrecemos una amplia gama de servicios diseñados para satisfacer las necesidades de todo tipo de viajeros. Nuestro equipo de profesionales está comprometido a proporcionar un servicio excepcional y asegurarse de que cada cliente tenga una experiencia memorable. Ya sea que estés buscando aventura, cultura o relajación, tenemos algo para ti.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
